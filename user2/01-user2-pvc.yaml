@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: user2-pvc
+  namespace: u2-spark-cluster
+  annotations:
+    volume.beta.kubernetes.io/storage-class: quobyte
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi

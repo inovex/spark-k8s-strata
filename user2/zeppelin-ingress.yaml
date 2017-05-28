@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: zeppelinu2
+  namespace: u2-spark-cluster
+spec:
+  rules:
+  - host: zeppelinu2.k8s.aws.training.inovex.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: zeppelin
+          servicePort: 80
